@@ -114,7 +114,7 @@ export default function TrustSection() {
 
                 {/* Comment */}
                 <p className="text-dark-700 mb-6 leading-relaxed italic">
-                  "{testimonial.comment}"
+                  &ldquo;{testimonial.comment}&rdquo;
                 </p>
 
                 {/* Author */}
