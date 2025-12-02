@@ -1,18 +1,31 @@
 'use client'
 
+import Image from 'next/image'
 import { Star, Quote } from 'lucide-react'
 
 const partners = [
-  { name: 'MetaTrader 5', description: 'Plataforma Oficial' },
-  { name: 'TradingView', description: 'Gráficos Pro' },
-  { name: 'Match-Trade', description: 'Tecnología Book A' },
-  { name: 'Bridge', description: 'Liquidez Institucional' },
+  {
+    name: 'MetaTrader 5',
+    description: 'Plataforma Oficial',
+    logo: '/partners/metatrader5-logo.png'
+  },
+  {
+    name: 'TradingView',
+    description: 'Gráficos Pro',
+    logo: '/partners/tradingview-logo.png'
+  },
+  {
+    name: 'cTrader',
+    description: 'Trading Avanzado',
+    logo: '/partners/ctrader-logo.png'
+  },
 ]
 
 const regulations = [
-  { name: 'FSC', description: 'Financial Services Commission' },
-  { name: 'IFMRRC', description: 'Comisión Reguladora Internacional' },
-  { name: 'SSL', description: 'Certificado de Seguridad' },
+  { name: 'SVG', description: 'St. Vincent & The Granadines' },
+  { name: 'FSC', description: 'Mauritius Soon' },
+  { name: 'Cyprus / CySEC', description: 'Chipre Soon' },
+  { name: 'UAE DFSA / SCA', description: 'Dubái Soon' },
 ]
 
 const testimonials = [
@@ -41,7 +54,7 @@ const testimonials = [
 
 export default function TrustSection() {
   return (
-    <section className="section-padding bg-white">
+    <section data-light-bg="true" className="section-padding bg-white">
       <div className="section-container">
         {/* Partners Section */}
         <div className="mb-24">
@@ -49,17 +62,22 @@ export default function TrustSection() {
             <h2 className="heading-sm mb-4">Partners Tecnológicos</h2>
             <p className="text-dark-600">Trabajamos con las mejores tecnologías del mercado</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="card-premium text-center hover:border-primary-200 border-2 border-transparent"
+                className="card-premium text-center hover:border-primary-200 border-2 border-transparent group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary-600">{partner.name.charAt(0)}</span>
+                <div className="h-20 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={160}
+                    height={60}
+                    className="object-contain max-h-16 w-auto"
+                  />
                 </div>
-                <h4 className="font-bold text-dark-900 mb-1">{partner.name}</h4>
-                <p className="text-sm text-dark-600">{partner.description}</p>
+                <p className="text-base text-dark-600">{partner.description}</p>
               </div>
             ))}
           </div>
@@ -71,7 +89,7 @@ export default function TrustSection() {
             <h2 className="heading-sm mb-4">Regulaciones & Seguridad</h2>
             <p className="text-dark-600">Cumplimiento total con estándares internacionales</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {regulations.map((regulation, index) => (
               <div
                 key={index}

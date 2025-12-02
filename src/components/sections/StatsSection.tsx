@@ -53,7 +53,7 @@ export default function StatsSection() {
       <div className="section-container relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-md mb-6">
+          <h2 className="heading-md text-white mb-6">
             Números que hablan por sí solos
           </h2>
           <p className="body-lg text-dark-200">
@@ -104,7 +104,7 @@ export default function StatsSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h4 className="text-lg font-semibold mb-2">Regulado & Seguro</h4>
+            <h4 className="text-lg text-white font-semibold mb-2">Regulado & Seguro</h4>
             <p className="text-dark-300 text-sm">Cumplimiento total con regulaciones internacionales</p>
           </div>
           <div className="text-center">
@@ -113,7 +113,7 @@ export default function StatsSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h4 className="text-lg font-semibold mb-2">Ejecución Instantánea</h4>
+            <h4 className="text-lg text-white font-semibold mb-2">Ejecución Instantánea</h4>
             <p className="text-dark-300 text-sm">Tecnología de vanguardia para trading profesional</p>
           </div>
           <div className="text-center">
@@ -122,7 +122,7 @@ export default function StatsSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </div>
-            <h4 className="text-lg font-semibold mb-2">Comunidad Activa</h4>
+            <h4 className="text-lg text-white font-semibold mb-2">Comunidad Activa</h4>
             <p className="text-dark-300 text-sm">Miles de traders compartiendo estrategias y experiencias</p>
           </div>
         </div>

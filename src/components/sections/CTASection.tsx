@@ -13,10 +13,10 @@ const benefits = [
 
 export default function CTASection() {
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section data-light-bg="true" className="section-padding relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700" />
-      
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />

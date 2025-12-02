@@ -9,18 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Invertox Premium Color Palette
+        // Invertox Premium Color Palette - Green Mint #5fe4a1
         primary: {
-          50: '#e6f7f7',
-          100: '#b3e8e8',
-          200: '#80d9d9',
-          300: '#4dcaca',
-          400: '#1abbbb',
-          500: '#00a8a8', // Main Invertox Turquoise
-          600: '#008a8a',
-          700: '#006c6c',
-          800: '#004e4e',
-          900: '#003030',
+          50: '#edfdf5',
+          100: '#d3fae6',
+          200: '#aaf5d0',
+          300: '#7aedb8',
+          400: '#5fe4a1',
+          500: '#5fe4a1', // Main Invertox Green
+          600: '#3dd68d',
+          700: '#2ab876',
+          800: '#1f9460',
+          900: '#16704a',
         },
         dark: {
           50: '#f5f5f7',
@@ -53,12 +53,12 @@ const config: Config = {
       boxShadow: {
         'premium': '0 10px 40px rgba(0, 0, 0, 0.05)',
         'premium-lg': '0 20px 60px rgba(0, 0, 0, 0.08)',
-        'premium-hover': '0 15px 50px rgba(0, 168, 168, 0.15)',
+        'premium-hover': '0 15px 50px rgba(95, 228, 161, 0.25)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-premium': 'linear-gradient(135deg, #00a8a8 0%, #004e4e 100%)',
-        'gradient-hero': 'linear-gradient(to bottom right, #f5f5f7, #e6f7f7)',
+        'gradient-premium': 'linear-gradient(135deg, #5fe4a1 0%, #2ab876 100%)',
+        'gradient-hero': 'linear-gradient(to bottom right, #f5f5f7, #edfdf5)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in-out',
