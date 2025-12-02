@@ -15,7 +15,7 @@ interface PriceWidgetProps {
   isLightMode?: boolean
 }
 
-const priceLabels = ['Buy Price', 'Sell Price']
+const priceLabels = ['Buy', 'Sell']
 
 export default function PriceWidget({ onCompareClick, isLightMode = false }: PriceWidgetProps) {
   const [priceData, setPriceData] = useState<PriceData>({
@@ -96,18 +96,16 @@ export default function PriceWidget({ onCompareClick, isLightMode = false }: Pri
   }, [])
 
   return (
-    <div className={`flex items-center backdrop-blur-xl rounded-full overflow-hidden shadow-lg transition-all duration-300 ${
-      isLightMode 
-        ? 'bg-dark-900/5 border border-dark-900/10 shadow-dark-900/5' 
-        : 'bg-white/5 border border-white/10 shadow-black/10'
-    }`}>
-      {/* Dynamic Price Label */}
-      <div className={`px-4 py-3 flex items-center border-r min-w-[140px] justify-center ${
-        isLightMode ? 'bg-dark-900/5 border-dark-900/10' : 'bg-white/5 border-white/10'
+    <div className={`flex items-center backdrop-blur-xl rounded-full overflow-hidden shadow-lg transition-all duration-300 ${isLightMode
+      ? 'bg-dark-900/5 border border-dark-900/10 shadow-dark-900/5'
+      : 'bg-white/5 border border-white/10 shadow-black/10'
       }`}>
+      {/* Dynamic Price Label */}
+      <div className={`px-2 py-3 flex items-center border-r w-20 justify-center ${isLightMode ? 'bg-dark-900/5 border-dark-900/10' : 'bg-white/5 border-white/10'
+        }`}>
         <span
           key={labelIndex}
-          className="text-primary-500 text-base font-bold tracking-wider whitespace-nowrap animate-fade-in"
+          className={`${isLightMode ? 'text-dark-900' : 'text-primary-500'} text-base font-bold tracking-wider whitespace-nowrap animate-fade-in`}
         >
           {priceLabels[labelIndex]}
         </span>
@@ -121,9 +119,8 @@ export default function PriceWidget({ onCompareClick, isLightMode = false }: Pri
           <>
             <span
               key={`price-${labelIndex}`}
-              className={`font-semibold text-base tabular-nums animate-fade-in ${
-                isLightMode ? 'text-dark-900' : 'text-white'
-              }`}
+              className={`font-semibold text-base tabular-nums animate-fade-in ${isLightMode ? 'text-dark-900' : 'text-white'
+                }`}
             >
               {labelIndex === 0 ? priceData.buyPrice : priceData.sellPrice}
             </span>
@@ -142,11 +139,10 @@ export default function PriceWidget({ onCompareClick, isLightMode = false }: Pri
       {/* Compare Button */}
       <button
         onClick={onCompareClick}
-        className={`flex items-center space-x-2 px-4 py-3 border-l transition-all ${
-          isLightMode 
-            ? 'border-dark-900/10 hover:bg-dark-900/5' 
-            : 'border-white/10 hover:bg-white/5'
-        }`}
+        className={`flex items-center space-x-2 px-4 py-3 border-l transition-all ${isLightMode
+          ? 'border-dark-900/10 hover:bg-dark-900/5'
+          : 'border-white/10 hover:bg-white/5'
+          }`}
       >
         <span className={`text-sm font-medium ${isLightMode ? 'text-dark-900/80' : 'text-white/80'}`}>Comparar</span>
         <Grid3X3 size={16} className={isLightMode ? 'text-dark-900/60' : 'text-white/60'} />

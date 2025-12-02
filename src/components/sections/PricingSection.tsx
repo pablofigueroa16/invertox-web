@@ -12,7 +12,7 @@ const accountTypes = [
     featured: false,
     specs: {
       deposit: 'USD $0',
-      spread: '1.6 a 1.2 pips',
+      spread: '1.2 a 1.6 pips',
       spreadNote: 'Basado en el depósito y/o lotaje',
       commission: '$0',
       commissionNote: null,
@@ -30,7 +30,7 @@ const accountTypes = [
     featured: true,
     specs: {
       deposit: 'USD $1,000',
-      spread: '0.8 a 0.6 pips',
+      spread: '0.6 a 0.8 pips',
       spreadNote: 'Basado en el depósito y/o lotaje',
       commission: '$4 (per side)',
       commissionNote: null,
@@ -50,7 +50,7 @@ const accountTypes = [
       deposit: 'USD $5,000',
       spread: '0.0',
       spreadNote: null,
-      commission: '$8 a $6 (per side)',
+      commission: '$6 a $8 (per side)',
       commissionNote: 'Basado en el depósito y/o lotaje',
       minLot: '0.01 lotes',
       leverage: '1:200',
@@ -68,7 +68,7 @@ const accountTypes = [
       deposit: 'USD $10,000',
       spread: '0.0',
       spreadNote: null,
-      commission: '$6 a $4 (per side)',
+      commission: '$4 a $6 (per side)',
       commissionNote: 'Basado en el depósito y/o lotaje',
       minLot: '0.01 lotes',
       leverage: '1:200',
@@ -199,7 +199,7 @@ export default function PricingSection() {
         {/* Bottom Note */}
         <div className="mt-16 text-center">
           <p className="text-white/40 text-sm max-w-4xl mx-auto leading-relaxed">
-            *Todas nuestras cuentas ofrecen transparencia, ejecución rápida, spreads competitivos y seguridad internacional, respaldadas por plataformas líderes como <span className="text-primary-400">MetaTrader 5</span>, <span className="text-primary-400">cTrader</span> e <span className="text-primary-400">Invertox</span>.
+            *Todas nuestras cuentas ofrecen transparencia, ejecución rápida, spreads competitivos y seguridad internacional, respaldadas por plataformas líderes como <span className="text-primary-400">MetaTrader 5</span>, <span className="text-primary-400">cTrader</span>.
           </p>
         </div>
       </div>

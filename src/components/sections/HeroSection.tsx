@@ -58,33 +58,25 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom Right Partner Badge - Trustpilot */}
+      {/* Bottom Right Partner Badge */}
       <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 lg:bottom-16 lg:right-16 hidden lg:flex items-center">
-        <a
-          href="https://www.trustpilot.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl px-5 py-3 hover:bg-white/15 transition-all duration-300 border border-white/10"
-        >
+
+        <div className="flex flex-col items-center justify-center">
+          <p className="text-xs text-center text-white/60">Deja tu reseña</p>
+          <a
+            href="https://www.trustpilot.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
           <Image
-            src="/truspilot-logo.png"
+            src="/truspilot.png"
             alt="Trustpilot"
-            width={192}
-            height={64}
-            className="h-16 w-auto object-contain"
+            width={256}
+            height={84}
+            className="h-28 w-auto object-contain"
           />
-          <div className="text-white border-l border-white/20 pl-3">
-            <p className="text-xs text-white/60">Official Partner</p>
-            <div className="flex items-center space-x-1 mt-0.5">
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-3.5 h-3.5 text-primary-400 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              ))}
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
-    </section>
+    </section >
   )
 }
