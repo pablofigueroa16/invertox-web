@@ -18,11 +18,9 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
 
-      // Detect if navbar is over a light background section
-      const navbarHeight = 100 // Approximate navbar height
+      const navbarHeight = 100
       const scrollPosition = window.scrollY + navbarHeight
 
-      // Get all light background sections
       const lightSections = document.querySelectorAll('[data-light-bg="true"]')
       let isOverLight = false
 
@@ -40,12 +38,10 @@ export default function Navbar() {
     }
 
     window.addEventListener('scroll', handleScroll)
-    // Initial check
     handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -86,143 +82,60 @@ export default function Navbar() {
                 <h4 className="text-white/40 group-hover/card:text-neutral-400 text-xs font-semibold tracking-[0.15em] mb-6 transition-colors duration-300">TRADING</h4>
                 <ul className="space-y-4">
                   <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Book A
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Copy Trading
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Plataformas
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Spreads
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Instrumentos
+                    <Link href="/social-trading" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
+                      Social Trading
                       <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
                     </Link>
                   </li>
                 </ul>
               </div>
 
-              {/* Column 2 - ACADEMY */}
+              {/* Column 2 - EDUCACION */}
               <div className="group/card bg-dark-800/40 hover:bg-white backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/5 hover:border-transparent hover:shadow-2xl hover:shadow-black/20 transition-all duration-300">
-                <h4 className="text-white/40 group-hover/card:text-neutral-400 text-xs font-semibold tracking-[0.15em] mb-6 transition-colors duration-300">ACADEMY</h4>
+                <h4 className="text-white/40 group-hover/card:text-neutral-400 text-xs font-semibold tracking-[0.15em] mb-6 transition-colors duration-300">EDUCACION</h4>
                 <ul className="space-y-4">
                   <li className="group/item">
                     <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Cursos
+                      Invertox Academy
                       <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
                     </Link>
                   </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Lives & Webinars
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Podcast
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Glosario
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Blog
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
+
                 </ul>
               </div>
 
-              {/* Column 3 - RESOURCES */}
-              <div className="group/card bg-dark-800/40 hover:bg-white backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/5 hover:border-transparent hover:shadow-2xl hover:shadow-black/20 transition-all duration-300">
-                <h4 className="text-white/40 group-hover/card:text-neutral-400 text-xs font-semibold tracking-[0.15em] mb-6 transition-colors duration-300">RESOURCES</h4>
-                <ul className="space-y-4">
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Invertox Insider
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Cuentas Fondeadas
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Evaluaciones
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      FAQs
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Soporte
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Column 4 - ABOUT US */}
+              {/* Column 3 - ABOUT US */}
               <div className="group/card bg-dark-800/40 hover:bg-white backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/5 hover:border-transparent hover:shadow-2xl hover:shadow-black/20 transition-all duration-300">
                 <h4 className="text-white/40 group-hover/card:text-neutral-400 text-xs font-semibold tracking-[0.15em] mb-6 transition-colors duration-300">ABOUT US</h4>
                 <ul className="space-y-4">
                   <li className="group/item">
                     <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Misión
+                      Conocenos
                       <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
                     </Link>
                   </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Comunidad
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Partners
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
-                  <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Regulaciones
-                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
-                    </Link>
-                  </li>
+                </ul>
+              </div>
+
+              {/* Column 4 - RESOURSE */}
+              <div className="group/card bg-dark-800/40 hover:bg-white backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/5 hover:border-transparent hover:shadow-2xl hover:shadow-black/20 transition-all duration-300">
+                <h4 className="text-white/40 group-hover/card:text-neutral-400 text-xs font-semibold tracking-[0.15em] mb-6 transition-colors duration-300">RESOURSE</h4>
+                <ul className="space-y-4">
                   <li className="group/item">
                     <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
                       Contacto
+                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
+                    </Link>
+                  </li>
+                  <li className="group/item">
+                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
+                      Terminos y Condiciones
+                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
+                    </Link>
+                  </li>
+                  <li className="group/item">
+                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
+                      Política de Privacidad
                       <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
                     </Link>
                   </li>
@@ -287,8 +200,8 @@ export default function Navbar() {
               {/* Menu Icon */}
               <button
                 className={`flex items-center justify-center w-12 h-12 rounded-full transition-all ${isOverLightBg && !isMenuOpen
-                    ? 'bg-dark-900/10 hover:bg-dark-900/20'
-                    : 'bg-white/10 hover:bg-white/20'
+                  ? 'bg-dark-900/10 hover:bg-dark-900/20'
+                  : 'bg-white/10 hover:bg-white/20'
                   }`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >

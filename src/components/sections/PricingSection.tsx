@@ -107,7 +107,7 @@ export default function PricingSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl text-white md:text-5xl font-bold mb-6">
-            CONOCE NUESTROS{' '}
+            CONOCE NUESTROS<br />
             <span className="text-primary-400">TIPOS DE CUENTA</span>
           </h2>
           <p className="text-white/60 text-lg leading-relaxed">

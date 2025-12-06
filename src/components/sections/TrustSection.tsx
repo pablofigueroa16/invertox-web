@@ -94,14 +94,16 @@ export default function TrustSection() {
                 key={index}
                 className="bg-gradient-to-br from-primary-50 to-primary-100/50 rounded-2xl p-8 text-center"
               >
-                <div className="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-premium overflow-hidden">
-                  <Image
-                    src={regulation.flag}
-                    alt={`${regulation.name} flag`}
-                    width={80}
-                    height={80}
-                    className="object-cover w-full h-full"
-                  />
+                <div className="w-20 h-20 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-premium">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-neutral-100">
+                    <Image
+                      src={regulation.flag}
+                      alt={`${regulation.name} flag`}
+                      width={48}
+                      height={48}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
                 </div>
                 <h4 className="font-bold text-dark-900 text-lg mb-2">{regulation.name}</h4>
                 <p className="text-sm text-dark-600">{regulation.description}</p>
