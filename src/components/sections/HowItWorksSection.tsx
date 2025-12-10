@@ -19,7 +19,7 @@ const steps = [
     icon: TrendingUp,
     step: '03',
     title: 'Opera en real',
-    description: 'Comienza a operar con tecnología Book A real o aplica a cuentas fondeadas para crecer tu capital.',
+    description: 'Comienza a operar con tecnología Libro A real o aplica a cuentas fondeadas para crecer tu capital.',
   },
   {
     icon: Award,
@@ -93,7 +93,7 @@ export default function HowItWorksSection() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <button className="btn-primary">
-            Comenzar Mi Camino
+            Comenzar mi camino
           </button>
         </div>
       </div>

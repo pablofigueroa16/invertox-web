@@ -4,7 +4,7 @@ import { Twitter, Linkedin, Instagram, Youtube, Send } from 'lucide-react'
 
 const footerLinks = {
   trading: [
-    { name: 'Book A', href: '#' },
+    { name: 'Libro A', href: '#' },
     { name: 'Copy Trading', href: '#' },
     { name: 'Cuentas Fondeadas', href: '#' },
     { name: 'Plataformas', href: '#' },

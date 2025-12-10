@@ -37,7 +37,7 @@ const stats = [
     icon: Shield,
     value: '100%',
     label: 'Transparencia',
-    description: 'Ejecución Book A verificable',
+    description: 'Ejecución Libro A verificable',
   },
 ]
 

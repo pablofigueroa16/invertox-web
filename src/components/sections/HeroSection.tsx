@@ -22,7 +22,7 @@ export default function HeroSection() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/invertox-video.mp4" type="video/mp4" />
+          <source src="/home-video.mp4" type="video/mp4" />
         </video>
 
         {/* Dark Overlay for Readability */}
@@ -42,7 +42,7 @@ export default function HeroSection() {
 
             {/* Subheadline */}
             <p className="text-base md:text-lg text-white/70 leading-relaxed max-w-lg">
-              Tecnología institucional Book A, spreads competitivos, educación profesional y cuentas fondeadas para traders en Latinoamérica.
+              Tecnología institucional Libro A, spreads competitivos, educación profesional y cuentas fondeadas para traders en Latinoamérica.
             </p>
 
             {/* CTA Button */}
@@ -59,23 +59,20 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom Right Partner Badge */}
-      <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 lg:bottom-16 lg:right-16 hidden lg:flex items-center">
-
-        <div className="flex flex-col items-center justify-center">
-          <p className="text-xs text-center text-white/60">Deja tu reseña</p>
-          <a
-            href="https://www.trustpilot.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
-          <Image
-            src="/truspilot.png"
-            alt="Trustpilot"
-            width={256}
-            height={84}
-            className="h-28 w-auto object-contain"
-          />
-        </div>
+      <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 lg:bottom-16 lg:right-16 hidden lg:flex">
+        <a
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group"
+        >
+          <div className="flex items-center gap-4 bg-white/10 border border-white/15 backdrop-blur-xl rounded-2xl px-5 py-4 shadow-lg shadow-black/20">
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold text-white">Deja tu reseña</span>
+              <span className="text-xs text-white/50">4.8/5 · Traders LATAM</span>
+            </div>
+          </div>
+        </a>
       </div>
     </section >
   )

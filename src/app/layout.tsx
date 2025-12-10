@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: 'Invertox - Tu Socio en Trading & Inversiones LATAM',
-  description: 'Tecnología Book A, educación profesional, cuentas fondeadas y comunidad de traders en Latinoamérica. Spreads competitivos y ejecución real.',
+  description: 'Tecnología Libro A, educación profesional, cuentas fondeadas y comunidad de traders en Latinoamérica. Spreads competitivos y ejecución real.',
   keywords: 'trading, forex, cuentas fondeadas, educación financiera, invertox, LATAM, fintech',
 }
 

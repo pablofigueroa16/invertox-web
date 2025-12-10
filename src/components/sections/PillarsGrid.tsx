@@ -7,7 +7,7 @@ const pillars = [
     icon: TrendingUp,
     title: '1. Trading',
     description: 'Tecnología institucional y condiciones competitivas.',
-    features: ['Book A Real', 'Spreads desde 0.0', 'Ejecución rápida y estable en MT5'],
+    features: ['Libro A Real', 'Spreads desde 0.0', 'Ejecución rápida y estable en MT5'],
     gradient: 'from-blue-500 to-blue-600',
     isComingSoon: false,
   },
@@ -37,7 +37,7 @@ const pillars = [
   },
   {
     icon: Cpu,
-    title: '5. Technologia & Herramientas',
+    title: '5. Tecnología & Herramientas',
     description: 'Ecosistema inteligente para potenciar tu trading.',
     features: ['Copy Trading & dashboard personalizado', 'CRM Trader + panel para IBs', 'Indicadores y herramientas avanzadas'],
     gradient: 'from-primary-500 to-primary-600',
