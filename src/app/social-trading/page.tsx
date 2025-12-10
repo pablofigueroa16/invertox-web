@@ -325,7 +325,7 @@ export default function SocialTradingPage() {
         </section>
 
         {/* BLOQUE 3 — ¿CÓMO FUNCIONA? */}
-        <section className="section-padding bg-gradient-to-br from-neutral-50 to-neutral-100">
+        <section data-light-bg="true" className="section-padding bg-gradient-to-br from-neutral-50 to-neutral-100">
           <div className="section-container">
             <AnimatedSection>
               <div className="text-center max-w-3xl mx-auto mb-16">

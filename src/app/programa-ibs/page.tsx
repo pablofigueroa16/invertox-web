@@ -110,6 +110,10 @@ const partnerTypes = [
 
 export default function ProgramaIBsPage() {
   const [heroVisible, setHeroVisible] = useState(false)
+  const [activeTraders, setActiveTraders] = useState(1)
+  const [lotsPerTrader, setLotsPerTrader] = useState(1)
+  const revenue = activeTraders * lotsPerTrader * 6
+
   useEffect(() => setHeroVisible(true), [])
 
   return (
@@ -196,8 +200,78 @@ export default function ProgramaIBsPage() {
           </div>
         </section>
 
+        {/* CALCULADORA IBs */}
+        <section data-light-bg="true" className="section-padding bg-gradient-to-br from-primary-50 to-primary-100/50">
+          <div className="section-container">
+            <AnimatedSection>
+              <div className="bg-gradient-to-br from-primary-50 to-primary-100/70 rounded-3xl p-6 md:p-10 border border-primary-100 shadow-premium">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                  <div className="space-y-8">
+                    <div className="space-y-2">
+                      <h2 className="heading-sm text-dark-900">Calcula tus ganancias como IBs de Invertox</h2>
+                      <p className="text-dark-700 text-sm md:text-base">
+                        Ajusta el número de referidos activos y su volumen promedio. Cada lote equivale a 6 USD en esta calculadora.
+                      </p>
+                    </div>
+
+                    {/* Slider 1 */}
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-sm font-semibold text-dark-900">
+                        <span>Clientes referidos activos</span>
+                        <span className="text-primary-600">{activeTraders} traders</span>
+                      </div>
+                      <input
+                        type="range"
+                        min={1}
+                        max={200}
+                        value={activeTraders}
+                        onChange={(e) => setActiveTraders(Number(e.target.value))}
+                        className="w-full accent-primary-500"
+                      />
+                    </div>
+
+                    {/* Slider 2 */}
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-sm font-semibold text-dark-900">
+                        <span>Volumen promedio por trader</span>
+                        <span className="text-primary-600">{lotsPerTrader} lotes</span>
+                      </div>
+                      <input
+                        type="range"
+                        min={1}
+                        max={100}
+                        value={lotsPerTrader}
+                        onChange={(e) => setLotsPerTrader(Number(e.target.value))}
+                        className="w-full accent-primary-500"
+                      />
+                    </div>
+
+                    <p className="text-xs text-dark-500">
+                      *Cálculo preliminar basado en un instrumento (ej: EUR/USD). Referencial, no garantiza resultados finales.
+                    </p>
+                  </div>
+
+                  {/* Resultado */}
+                  <div className="bg-white rounded-3xl border border-primary-100 shadow-premium p-6 md:p-8 flex flex-col gap-6 justify-center text-center">
+                    <div>
+                      <p className="text-sm font-semibold text-dark-700 mb-2">Tu ingreso estimado mensual</p>
+                      <p className="text-4xl font-bold text-primary-600">
+                        ${revenue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      </p>
+                    </div>
+                    <button className="group inline-flex items-center justify-center gap-3 bg-primary-500 hover:bg-primary-600 text-dark-900 px-8 py-4 rounded-full transition-all font-semibold mx-auto">
+                      <span>Únete como IB</span>
+                      <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* BENEFICIOS */}
-        <section className="section-padding bg-dark-950">
+        <section data-light-bg="true" className="section-padding bg-dark-950">
           <div className="section-container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-md mb-4">Beneficios principales</h2>
@@ -290,24 +364,26 @@ export default function ProgramaIBsPage() {
         </section>
 
         {/* CÓMO FUNCIONA */}
-        <section className="section-padding bg-dark-950">
+        <section data-light-bg="true" className="section-padding bg-gradient-hero">
           <div className="section-container">
             <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="heading-md mb-4">¿Cómo funciona el programa?</h2>
-              <p className="body-lg text-dark-200">Cuatro pasos simples para empezar a monetizar</p>
+              <p className="body-lg text-dark-600">Cuatro pasos simples para empezar a monetizar</p>
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
               {steps.map((step, idx) => (
                 <AnimatedSection key={step.title} delay={idx * 100}>
                   <div className="card-premium h-full bg-white border border-neutral-200/70 text-dark-800">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-8 h-8 shrink-0 rounded-full bg-[#00FFA9]/15 border border-[#00FFA9]/40 flex items-center justify-center text-sm font-bold text-[#00FFA9]">
+                    <div className="flex items-start gap-4 mb-3">
+                      <div className="w-10 h-10 shrink-0 rounded-full bg-[#00FFA9]/15 border border-[#00FFA9]/40 flex items-center justify-center text-sm font-bold text-[#00FFA9]">
                         {`0${idx + 1}`}
                       </div>
-                      <h3 className="text-lg font-bold text-dark-900 whitespace-nowrap">{step.title}</h3>
+                      <div className="flex-1 space-y-2">
+                        <h3 className="text-lg font-bold text-dark-900 leading-snug">{step.title}</h3>
+                        <p className="text-dark-700 text-sm leading-relaxed">{step.description}</p>
+                      </div>
                     </div>
-                    <p className="text-dark-700 text-sm leading-relaxed">{step.description}</p>
                   </div>
                 </AnimatedSection>
               ))}
