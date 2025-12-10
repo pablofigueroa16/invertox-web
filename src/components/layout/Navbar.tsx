@@ -115,8 +115,8 @@ export default function Navbar() {
                 <h4 className="text-white/40 group-hover/card:text-neutral-400 text-xs font-semibold tracking-[0.15em] mb-6 transition-colors duration-300">ABOUT US</h4>
                 <ul className="space-y-4">
                   <li className="group/item">
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
-                      Conocenos
+                    <Link href="/conocenos" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
+                      Conócenos
                       <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
                     </Link>
                   </li>
