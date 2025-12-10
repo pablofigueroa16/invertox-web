@@ -4,11 +4,10 @@ import { useEffect, useState, useRef } from 'react'
 import {
   CheckCircle2,
   ArrowRight,
-  Link2,
   Users,
   BarChart3,
-  DollarSign,
   Shield,
+  ChevronRight
 } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -116,12 +115,13 @@ export default function ProgramaIBsPage() {
 
   useEffect(() => setHeroVisible(true), [])
 
+
   return (
     <>
       <Navbar />
       <main className="bg-dark-950 text-white">
         {/* HERO */}
-        <section className="relative overflow-hidden min-h-[100vh] flex items-center bg-gradient-to-br from-black via-dark-900 to-dark-800">
+        <section className="relative overflow-hidden min-h-[100vh] flex items-center bg-gradient-to-br from-black via-dark-900 to-dark-800 pt-6 md:pt-24 lg:pt-10">
           {/* Accents */}
           <div className="absolute inset-0 opacity-40">
             <div className="absolute -left-24 top-10 w-96 h-96 bg-[#00FFA9]/20 rounded-full blur-3xl" />
@@ -132,7 +132,7 @@ export default function ProgramaIBsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Mockup / visual */}
               <AnimatedSection
-                className={`relative order-2 lg:order-1 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`relative order-2 lg:order-2 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 <div className="relative bg-gradient-to-br from-dark-800 to-dark-900 border border-white/10 rounded-3xl p-6 shadow-2xl">
                   <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#00FFA9]/20 rounded-full blur-2xl" />
@@ -173,8 +173,14 @@ export default function ProgramaIBsPage() {
 
               {/* Copy */}
               <AnimatedSection
-                className={`order-1 lg:order-2 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`order-1 lg:order-1 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
+                {/* Breadcrumb */}
+                <div className="flex items-center gap-2 text-sm text-white/60 mb-4">
+                  <a href="/" className="hover:text-primary-500 transition-colors">Inicio</a>
+                  <ChevronRight size={14} />
+                  <span className="text-white">Programa IBs</span>
+                </div>
                 <div className="inline-flex items-center gap-2 text-sm font-semibold text-[#00FFA9] bg-[#00FFA9]/10 rounded-full px-4 py-2 border border-[#00FFA9]/30 my-6">
                   Programa de IBs · Partners · Influencers
                 </div>

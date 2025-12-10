@@ -216,6 +216,13 @@ export default function SocialTradingPage() {
           <div className="relative z-10 section-container w-full py-32 md:py-40">
             <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 
+              {/* Breadcrumb */}
+              <div className="flex items-center justify-start gap-2 text-sm text-white/60 mb-6">
+                <a href="/" className="hover:text-primary-500 transition-colors">Inicio</a>
+                <ChevronRight size={14} />
+                <span className="text-white">Social Trading</span>
+              </div>
+
               {/* Badge */}
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
                 <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />

@@ -1,5 +1,6 @@
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { ChevronRight } from 'lucide-react'
 
 const fullText = `Aviso de Privacidad
 
@@ -80,7 +81,13 @@ export default function AvisoPrivacidadPage() {
           </div>
           <div className="section-container relative z-10">
             <div className="max-w-3xl">
-              <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-500/10 rounded-full px-4 py-2 border border-primary-500/20 mb-6">
+              {/* Breadcrumb */}
+              <div className="flex items-center gap-2 text-sm text-white/60 mb-6 mt-6">
+                <a href="/" className="hover:text-primary-500 transition-colors">Inicio</a>
+                <ChevronRight size={14} />
+                <span className="text-white">Aviso de Privacidad</span>
+              </div>
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-500/10 rounded-full px-4 py-2 border border-primary-500/20 mb-6">
                 Legal
               </div>
               <h1 className="heading-md text-white leading-tight mb-4">Aviso de Privacidad</h1>
@@ -98,17 +105,6 @@ export default function AvisoPrivacidadPage() {
             <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 space-y-8">
               <div className="space-y-4 text-sm text-white/80 leading-relaxed whitespace-pre-line">
                 {fullText}
-              </div>
-              <div className="text-xs text-white/50">
-                Fuente:{' '}
-                <a
-                  className="underline text-primary-300"
-                  href="https://invertox.com/aviso-privacidad"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  https://invertox.com/aviso-privacidad
-                </a>
               </div>
             </div>
           </div>

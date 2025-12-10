@@ -1,6 +1,6 @@
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { ArrowRight, Shield, Globe2, Cpu, Zap, Smartphone, Users, Copy, Server } from 'lucide-react'
+import { ArrowRight, Shield, Globe2, Cpu, Zap, Smartphone, Users, Copy, Server, ChevronRight } from 'lucide-react'
 
 const diferenciales = [
   'Capital compartido hasta x10 sin endeudamiento',
@@ -24,6 +24,12 @@ export default function ConocenosPage() {
           </div>
           <div className="pt-6 section-container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="space-y-6">
+              {/* Breadcrumb */}
+              <div className="flex items-center gap-2 text-sm text-white/60">
+                <a href="/" className="hover:text-primary-500 transition-colors">Inicio</a>
+                <ChevronRight size={14} />
+                <span className="text-white">Conócenos</span>
+              </div>
               <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-500/10 rounded-full px-4 py-2 border border-primary-500/20">
                 Nosotros
               </div>

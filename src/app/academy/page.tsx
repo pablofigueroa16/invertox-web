@@ -11,7 +11,7 @@ import {
   BarChart3,
   CheckCircle2,
   Layers,
-  Zap,
+  ChevronRight,
 } from 'lucide-react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -166,7 +166,7 @@ export default function AcademyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Visual */}
               <AnimatedSection
-                className={`relative order-2 lg:order-1 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`relative order-2 lg:order-2 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
               >
                 <div className="relative bg-gradient-to-br from-dark-800 to-dark-900 border border-white/10 rounded-3xl p-6 shadow-2xl">
@@ -203,9 +203,15 @@ export default function AcademyPage() {
 
               {/* Copy */}
               <AnimatedSection
-                className={`order-1 lg:order-2 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`order-1 lg:order-1 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
               >
+                {/* Breadcrumb */}
+                <div className="flex items-center justify-start gap-2 text-sm text-white/60 mb-6">
+                  <a href="/" className="hover:text-primary-500 transition-colors">Inicio</a>
+                  <ChevronRight size={14} />
+                  <span className="text-white">Academy</span>
+                </div>
                 <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-500/10 rounded-full px-4 py-2 border border-primary-500/20 mb-6">
                   Academy · Cursos · Webinars · Comunidad
                 </div>

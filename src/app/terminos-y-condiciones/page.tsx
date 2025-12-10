@@ -1,5 +1,6 @@
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import { ChevronRight } from 'lucide-react'
 
 const fullText = `
 OFERTA PÚBLICA – Términos y condiciones de uso
@@ -53,7 +54,13 @@ export default function TerminosYCondicionesPage() {
           </div>
           <div className="section-container relative z-10">
             <div className="max-w-3xl">
-              <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-500/10 rounded-full px-4 py-2 border border-primary-500/20 mb-6">
+              {/* Breadcrumb */}
+              <div className="flex items-center gap-2 text-sm text-white/60 mb-6 mt-6">
+                <a href="/" className="hover:text-primary-500 transition-colors">Inicio</a>
+                <ChevronRight size={14} />
+                <span className="text-white">Términos y Condiciones</span>
+              </div>
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 bg-primary-500/10 rounded-full px-4 py-2 border border-primary-500/20 mb-6">
                 Legal
               </div>
               <h1 className="heading-md text-white leading-tight mb-4">Términos y Condiciones</h1>
