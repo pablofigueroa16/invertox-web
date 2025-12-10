@@ -55,7 +55,7 @@ const pillars = [
 
 export default function PillarsGrid() {
   return (
-    <section data-light-bg="true" className="section-padding bg-white relative">
+    <section data-light-bg="true" className="section-padding pb-8 md:pb-12 lg:pb-16 bg-white relative">
       <div className="section-container">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
