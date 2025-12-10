@@ -120,6 +120,12 @@ export default function Navbar() {
                       <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
                     </Link>
                   </li>
+                  <li className="group/item">
+                    <Link href="/reviews" onClick={() => setIsMenuOpen(false)} className="text-white group-hover/card:text-dark-800 group-hover/item:!text-primary-600 group-hover/item:font-medium group-hover/item:underline group-hover/item:decoration-primary-600 text-lg font-light transition-all duration-300 flex items-center gap-2">
+                      Reseñas
+                      <ExternalLink size={14} className="opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
+                    </Link>
+                  </li>
                 </ul>
               </div>
 

@@ -12,7 +12,7 @@ import CTASection from '@/components/sections/CTASection'
 import TickerTapeWidget from '@/components/widgets/TickerTapeWidget'
 import Footer from '@/components/layout/Footer'
 import Navbar from '@/components/layout/Navbar'
-
+import VideoSection from '@/components/sections/VideoSection'
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -57,14 +57,15 @@ export default function Home() {
       <Navbar />
       <AnimatedSection><HeroSection /></AnimatedSection>
       <AnimatedSection delay={50}><PillarsGrid /></AnimatedSection>
-      <AnimatedSection delay={100}><StatsSection /></AnimatedSection>
-      <AnimatedSection delay={150}><HowItWorksSection /></AnimatedSection>
-      <AnimatedSection delay={200}><PricingSection /></AnimatedSection>
-      <AnimatedSection delay={250}><TrustSection /></AnimatedSection>
-      <AnimatedSection delay={300}><FAQSection /></AnimatedSection>
-      <AnimatedSection delay={350}><ContactSection /></AnimatedSection>
-      <AnimatedSection delay={400}><CTASection /></AnimatedSection>
-      <AnimatedSection delay={450}><TickerTapeWidget /></AnimatedSection>
+      <AnimatedSection delay={100}><VideoSection /></AnimatedSection>
+      <AnimatedSection delay={150}><StatsSection /></AnimatedSection>
+      <AnimatedSection delay={200}><HowItWorksSection /></AnimatedSection>
+      <AnimatedSection delay={250}><PricingSection /></AnimatedSection>
+      <AnimatedSection delay={300}><TrustSection /></AnimatedSection>
+      <AnimatedSection delay={350}><FAQSection /></AnimatedSection>
+      <AnimatedSection delay={400}><ContactSection /></AnimatedSection>
+      <AnimatedSection delay={450}><CTASection /></AnimatedSection>
+      <AnimatedSection delay={500}><TickerTapeWidget /></AnimatedSection>
       <Footer />
     </main>
   )

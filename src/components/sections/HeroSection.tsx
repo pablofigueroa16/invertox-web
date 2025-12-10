@@ -3,6 +3,7 @@
 import { ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -59,20 +60,15 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom Right Partner Badge */}
-      <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 lg:bottom-16 lg:right-16 hidden lg:flex">
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group"
-        >
-          <div className="flex items-center gap-4 bg-white/10 border border-white/15 backdrop-blur-xl rounded-2xl px-5 py-4 shadow-lg shadow-black/20">
+      <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 lg:bottom-16 lg:right-16 hidden lg:flex z-20">
+        <Link href="/reviews">
+          <div className="flex items-center gap-4 bg-white/10 border border-white/15 backdrop-blur-xl rounded-2xl px-5 py-4 shadow-lg shadow-black/20 hover:bg-white/15 hover:border-white/25 transition-all duration-300 cursor-pointer">
             <div className="flex flex-col">
               <span className="text-sm font-semibold text-white">Deja tu reseña</span>
               <span className="text-xs text-white/50">4.8/5 · Traders LATAM</span>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </section >
   )
